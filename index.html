@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor Musical</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Mi Reproductor Musical 🎵</h1>
+            <p>Selecciona una canción para escuchar</p>
+        </header>
+
+        <main class="music-gallery">
+            <div class="music-card" data-audio="audio1">
+                <div class="image-container">
+                    <img src="https://i.ibb.co/vvQwPmY2/manuel-medrano.jpg" alt="Manuel Medrano" class="music-image">
+                    <div class="play-overlay">
+                        <div class="play-button">▶️</div>
+                    </div>
+                </div>
+                <div class="music-info">
+                    <h3>Manuel Medrano</h3>
+                    <p>Canción 1</p>
+                </div>
+            </div>
+ <div class="music-card" data-audio="audio2">
+                <div class="image-container">
+                    <img src="https://i.ibb.co/hJ6z1GvV/shawn-mendes.jpg" alt="Shawn Mendes" class="music-image">
+                    <div class="play-overlay">
+                        <div class="play-button">▶️</div>
+                    </div>
+                </div>
+                <div class="music-info">
+                    <h3>Shawn Mendes</h3>
+                    <p>Canción 2</p>
+                </div>
+            </div>
+            
+
+            <div class="music-card" data-audio="audio3">
+                <div class="image-container">
+                    <img src="https://i.ibb.co/SwpbMgdN/Mar-a-Becerra.jpg" alt="María Becerra" class="music-image">
+                    <div class="play-overlay">
+                        <div class="play-button">▶️</div>
+                    </div>
+                </div>
+                <div class="music-info">
+                    <h3>María Becerra</h3>
+                    <p>Canción 3</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="audio-player">
+            <div class="current-song">
+                <span id="current-title">Selecciona una canción</span>
+            </div>
+            <div class="controls">
+                <button id="playPauseBtn">⏸️</button>
+                <input type="range" id="progressBar" min="0" max="100" value="0">
+                <span id="timeDisplay">0:00 / 0:00</span>
+            </div>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.7">
+        </div>
+
+        <!-- Audio elements - Con archivos locales -->
+        <audio id="audio1" preload="metadata">
+            <source src="audios/manuel-medrano.mp3" type="audio/mpeg">
+            <source src="audios/manuel-medrano.wav" type="audio/wav">
+            Tu navegador no soporta este formato de audio.
+        </audio>
+
+        <audio id="audio2" preload="metadata">
+            <source src="audios/shawn-mendes.mp3" type="audio/mpeg">
+            <source src="audios/shawn-mendes.mp3" type="audio/wav">
+            Tu navegador no soporta este formato de audio.
+        </audio>
+
+        <audio id="audio3" preload="metadata">
+            <source src="audios/maria-becerra.mp3" type="audio/mpeg">
+            <source src="audios/maria-becerra.wav" type="audio/wav">
+            Tu navegador no soporta este formato de audio.
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
